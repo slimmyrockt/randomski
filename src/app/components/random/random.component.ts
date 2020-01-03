@@ -21,6 +21,10 @@ export class RandomComponent implements OnInit {
     this.random();
   }
 
+  timer() {
+    //setInterval(() => this.random(), 300);
+  }
+
   random() {
     this.randomChar();
     this.randomIcon();
