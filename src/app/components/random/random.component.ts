@@ -9,12 +9,16 @@ export class RandomComponent implements OnInit {
 
   char: string;
   icon: string;
+  iconText: string;
   iconArray: string[];
+  iconArrayText: string[];
 
   constructor() {
     this.char = undefined;
     this.icon = undefined;
+    this.iconText = undefined;
     this.iconArray = ['fas fa-dog', 'fas fa-home', 'fas fa-utensils', 'fab fa-raspberry-pi', 'fas fa-carrot', 'fas fa-palette', 'fas fa-male'];
+    this.iconArrayText = ['Tier', 'Gegenstand', 'Gericht', 'Obst', 'Gemüse', 'Farbe', 'Person'];
   }
 
   ngOnInit() {
@@ -32,8 +36,10 @@ export class RandomComponent implements OnInit {
 
   randomIcon() {
     this.icon = undefined;
+    this.iconText = undefined;
     let rnum = Math.floor(Math.random() * this.iconArray.length);
     this.icon = this.iconArray[rnum];
+    this.iconText = this.iconArrayText[rnum];
   }
 
   randomChar() {
